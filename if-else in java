@@ -1,0 +1,187 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // 1. Even or Odd
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println("Even Number");
+        } else {
+            System.out.println("Odd Number");
+        }
+
+
+        // 2. Positive, Negative or Zero
+        if (num > 0) {
+            System.out.println("Positive Number");
+        } else if (num < 0) {
+            System.out.println("Negative Number");
+        } else {
+            System.out.println("Zero");
+        }
+
+
+        // 3. Largest of Two Numbers
+        System.out.print("\nEnter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (a > b) {
+            System.out.println(a + " is greater");
+        } else if (b > a) {
+            System.out.println(b + " is greater");
+        } else {
+            System.out.println("Both are equal");
+        }
+
+
+        // 4. Largest of Three Numbers
+        System.out.print("\nEnter third number: ");
+        int c = sc.nextInt();
+
+        if (a >= b && a >= c) {
+            System.out.println(a + " is largest");
+        } else if (b >= a && b >= c) {
+            System.out.println(b + " is largest");
+        } else {
+            System.out.println(c + " is largest");
+        }
+
+
+        // 5. Voting Eligibility
+        System.out.print("\nEnter your age: ");
+        int age = sc.nextInt();
+
+        if (age >= 18) {
+            System.out.println("You are eligible to vote");
+        } else {
+            System.out.println("You are not eligible to vote");
+        }
+
+
+        // 6. Pass or Fail
+        System.out.print("\nEnter marks: ");
+        int marks = sc.nextInt();
+
+        if (marks >= 40) {
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
+
+
+        // 7. Grade
+        if (marks >= 90) {
+            System.out.println("Grade: A+");
+        } else if (marks >= 80) {
+            System.out.println("Grade: A");
+        } else if (marks >= 70) {
+            System.out.println("Grade: B");
+        } else if (marks >= 60) {
+            System.out.println("Grade: C");
+        } else if (marks >= 40) {
+            System.out.println("Grade: D");
+        } else {
+            System.out.println("Grade: F");
+        }
+
+
+        // 8. Divisible by 5 and 11
+        System.out.print("\nEnter number: ");
+        int n = sc.nextInt();
+
+        if (n % 5 == 0 && n % 11 == 0) {
+            System.out.println("Divisible by both 5 and 11");
+        } else {
+            System.out.println("Not divisible by both 5 and 11");
+        }
+
+
+        // 9. Leap Year
+        System.out.print("\nEnter year: ");
+        int year = sc.nextInt();
+
+        if ((year % 400 == 0) ||
+            (year % 4 == 0 && year % 100 != 0)) {
+
+            System.out.println("Leap Year");
+
+        } else {
+            System.out.println("Not a Leap Year");
+        }
+
+
+        // 10. Nested if-else
+        System.out.print("\nEnter age for driving licence: ");
+        int drivingAge = sc.nextInt();
+
+        if (drivingAge >= 18) {
+
+            System.out.print("Do you have a licence test pass? (1 = Yes, 0 = No): ");
+            int test = sc.nextInt();
+
+            if (test == 1) {
+                System.out.println("You can get a driving licence");
+            } else {
+                System.out.println("First pass the test");
+            }
+
+        } else {
+            System.out.println("You are under 18");
+        }
+
+
+        // 11. Logical AND
+        System.out.print("\nEnter your age: ");
+        int userAge = sc.nextInt();
+
+        System.out.print("Are you a citizen? (true/false): ");
+        boolean citizen = sc.nextBoolean();
+
+        if (userAge >= 18 && citizen) {
+            System.out.println("Eligible");
+        } else {
+            System.out.println("Not Eligible");
+        }
+
+
+        // 12. Logical OR
+        int x = 10;
+
+        if (x == 10 || x == 20) {
+            System.out.println("\nX is either 10 or 20");
+        } else {
+            System.out.println("X is neither 10 nor 20");
+        }
+
+
+        // 13. NOT operator
+        boolean isRain = false;
+
+        if (!isRain) {
+            System.out.println("You can go outside");
+        } else {
+            System.out.println("Take an umbrella");
+        }
+
+
+        // 14. Ternary Operator
+        int number = 15;
+
+        String result = (number % 2 == 0)
+                ? "Even"
+                : "Odd";
+
+        System.out.println("Ternary Result: " + result);
+
+
+        sc.close();
+    }
+}
